@@ -1,0 +1,10 @@
+requires = ["tox>=4"]
+env_list = ["check", "3.12"]
+
+
+[env.check]
+description = "Run pre-commit hooks for linting, formatting, and type checking"
+deps = ["pre-commit"]
+skip_install = true
+commands = [["pre-commit", "run", "-a"]]
+
